@@ -1,0 +1,19 @@
+body{
+    background: pink;
+}
+.fondoAzul{
+    background: lightblue;
+}
+.fondoVerde{
+    background: lightgreen;
+}
+.letraGrande{
+    font-size: 40px;
+}
+.letraSub{
+    text-decoration: underline;
+}
+.activado{
+    font-weight: bold;
+    background: yellow;
+}

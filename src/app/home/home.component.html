@@ -1,1 +1,15 @@
 <h2>{{titulo}}</h2>
+<hr/>
+<p>{{fecha| date: 'dd/MM/yyyy'}}</p>
+<p>{{fecha| date: 'fullDate' | uppercase | lowercase}}</p>
+<p>{{5 | conversor: 7}}</p>
+<input type="text" [(ngModel)]="prenda_a_guardar">
+<button (click)="guardarPrenda(prenda_a_guardar)">Añadir prenda</button>
+<p *ngIf="prenda_a_guardar"><span>La prenda a guardar es: <strong>{{prenda_a_guardar}}</strong></span></p>
+<h3>Listado de prendas de ropa</h3>
+<ul>
+    <li *ngFor="let prenda of listado_ropa; let id = index">
+        {{prenda}}
+        <button (click)="eliminarPrenda(id)">Eliminar</button>
+    </li>
+</ul> 

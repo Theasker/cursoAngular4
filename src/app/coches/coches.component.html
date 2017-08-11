@@ -36,10 +36,25 @@
     </form>
 </div>
 <div>
-    <h4>Listado de coches</h4>
+    <h4 confirm>Listado de coches</h4>
     <ul>
         <li *ngFor="let coche of coches">
             {{coche.nombre}} - {{coche.caballaje}} - {{coche.color}} 
         </li>
     </ul>
+</div>
+
+<div>
+    <h4 confirm>Listado de articulos</h4>
+    <ul *ngIf="articulos">
+        <li *ngFor="let articulo of articulos">
+            {{articulo.id}} - {{articulo.title}}
+        </li>
+    </ul>
+    <span *ngIf="!articulos">Cargando listado ...</span> 
+</div>
+
+<div>
+    <span appShadow>Alligator</span>
+    <button type="button" confirm>Visit Rangle</button>
 </div>
